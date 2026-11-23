@@ -412,27 +412,39 @@ function SponsorshipPage() {
       <section className="section section-light">
         <div className="section-heading">
           <div><span className="kicker">Sponsor recognition</span><h2>Partners powering the summit.</h2></div>
-          <a className="text-link" href="mailto:sponsors@aaif.io?subject=Agentic%20AI%20Summit%20Sponsorship">Become a sponsor <ArrowRight size={16} /></a>
+          <a className="text-link" href={`mailto:${content.sponsors.contact.email}?subject=Agentic%20AI%20Summit%20Sponsorship`}>Become a sponsor <ArrowRight size={16} /></a>
         </div>
-        <div className="sponsor-logo-grid">{content.partners.sponsors.map((sponsor) => (
+        <div className="sponsor-logo-grid">{content.sponsors.sponsors.map((sponsor) => (
           <a className="sponsor-logo-card" href={sponsor.url} key={sponsor.id}>
             {sponsor.logo ? <img src={sponsor.logo} alt={`${sponsor.name} logo`} /> : <strong>{sponsor.name}</strong>}
             <span>{sponsor.tier}</span>
           </a>
         ))}</div>
         <div className="sponsorship-divider" />
+        <div className="section-heading">
+          <div><span className="kicker">Sponsorship levels</span><h3>Choose a level of impact.</h3></div>
+          <p>Contact {content.sponsors.contact.name}, {content.sponsors.contact.role}, to tailor a partnership.</p>
+        </div>
+        <div className="sponsor-level-grid">{content.sponsors.levels.map((level) => (
+          <article className="sponsor-level" key={level.id}>
+            <span>{level.name}</span>
+            <p>{level.description}</p>
+            <ul>{level.benefits.map((benefit) => <li key={benefit}><Check size={14} /> {benefit}</li>)}</ul>
+          </article>
+        ))}</div>
+        <div className="sponsorship-divider" />
         <div className="sponsor-package-heading">
           <div><span className="kicker">Sponsorship prospectus</span><h3>Packages for meaningful technical and community impact.</h3></div>
           <p>Packages can be combined or tailored around hospitality, community reach, lab tooling, and media production.</p>
         </div>
-        <div className="sponsor-package-grid">{content.partners.sponsorPackages.map((sponsorPackage) => (
+        <div className="sponsor-package-grid">{content.sponsors.sponsorPackages.map((sponsorPackage) => (
           <article className="sponsor-package" key={sponsorPackage.id}>
             <span>{sponsorPackage.collaboration}</span>
             <h4>{sponsorPackage.name}</h4>
             <p className="sponsor-package-audience">{sponsorPackage.audience}</p>
             <p>{sponsorPackage.description}</p>
             <ul>{sponsorPackage.benefits.map((benefit) => <li key={benefit}><Check size={14} /> {benefit}</li>)}</ul>
-            <a href="mailto:npgovintarajan@gmail.com?subject=Agentic%20AI%20Summit%20Sponsorship%20Inquiry">Discuss this package <ArrowRight size={15} /></a>
+            <a href={`mailto:${content.sponsors.contact.email}?subject=${encodeURIComponent(`${sponsorPackage.name} Sponsorship Inquiry`)}`}>Discuss this package <ArrowRight size={15} /></a>
           </article>
         ))}</div>
       </section>

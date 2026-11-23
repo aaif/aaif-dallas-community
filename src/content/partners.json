@@ -13,49 +13,5 @@
     { "id": "gdg", "name": "Google Developer Group", "description": "Regional developer community for cloud and AI builders.", "logo": null },
     { "id": "dallas-ai-agents", "name": "Dallas AI Agents User Group", "description": "Microsoft community focused on agentic AI practitioners, builders, and local collaboration.", "logo": null },
     { "id": "global-ai-builders", "name": "Global AI Open Source Builders", "description": "Open-source builders collaborating on practical AI and agent systems.", "logo": null }
-  ],
-  "sponsors": [
-    {
-      "id": "leadership",
-      "name": "Sponsorships Open",
-      "tier": "Founding Partner",
-      "description": "Support a free, inclusive technical summit for 400+ practitioners.",
-      "logo": null,
-      "url": "mailto:npgovintarajan@gmail.com?subject=Agentic%20AI%20Summit%20Sponsorship"
-    }
-  ],
-  "sponsorPackages": [
-    {
-      "id": "hospitality",
-      "name": "Food & Hospitality",
-      "audience": "400 delegates, speakers, and organizers",
-      "description": "Support breakfast, a catered lunch, or refreshment stations throughout the summit.",
-      "benefits": ["Dining or station signage", "Stage and break-slide recognition", "Direct networking access"],
-      "collaboration": "Hospitality Sponsor"
-    },
-    {
-      "id": "member-merch",
-      "name": "AAIF Member Products & Swag",
-      "audience": "Every summit delegate",
-      "description": "Support official AAIF apparel, developer bags, badge lanyards, and practical attendee gear.",
-      "benefits": ["Co-branded merchandise placement", "Event and bag badge visibility", "Post-event brand presence"],
-      "collaboration": "Official Merch Sponsor"
-    },
-    {
-      "id": "lab-tooling",
-      "name": "Hands-On Lab & Tooling",
-      "audience": "MCP and A2A lab participants",
-      "description": "Provide cloud compute, model API access, sandbox environments, and tooling for the code-first labs.",
-      "benefits": ["Lab repository attribution", "Developer environment integration", "Printed guide recognition"],
-      "collaboration": "Platform Sponsor"
-    },
-    {
-      "id": "av-media",
-      "name": "AV, Live Stream & Podcast",
-      "audience": "In-person and online viewers",
-      "description": "Power confidence monitors, multi-camera broadcast, session recording, and an on-site podcast space.",
-      "benefits": ["Stream lower-thirds", "Podcast backdrop branding", "Archive attribution"],
-      "collaboration": "AV & Media Sponsor"
-    }
   ]
 }

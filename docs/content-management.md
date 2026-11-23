@@ -9,7 +9,8 @@ secrets to this directory.
 - `event.json`: summit identity, dates, Luma links, and poster form;
 - `schedule.json`: tracks, sessions, times, rooms, speakers, and tags;
 - `speakers.json`: presenter profiles and session relationships;
-- `partners.json`: organizing communities, community partners, and sponsors;
+- `partners.json`: organizing communities and community partners;
+- `sponsors.json`: sponsor contact, sponsors, sponsorship levels, and packages;
 - `organizers.json`: core team and committee records;
 - `committees.json`: operational workstreams and their responsibilities;
 - `resources.json`: public lab preparation links;

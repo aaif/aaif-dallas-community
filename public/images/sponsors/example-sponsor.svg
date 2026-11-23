@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title description">
+  <title id="title">Example Technology logo</title>
+  <desc id="description">Placeholder logo for demonstrating sponsor recognition.</desc>
+  <rect width="420" height="120" rx="18" fill="#0b1f3a"/>
+  <circle cx="60" cy="60" r="32" fill="#29c785"/>
+  <path d="M44 61 57 74 78 47" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+  <text x="112" y="55" fill="#fff" font-family="Arial, sans-serif" font-size="26" font-weight="700">Example</text>
+  <text x="112" y="84" fill="#9fb2ca" font-family="Arial, sans-serif" font-size="21">Technology</text>
+</svg>
