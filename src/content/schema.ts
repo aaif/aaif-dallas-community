@@ -80,6 +80,8 @@ export const organizerSchema = z.object({
   name: z.string().min(1),
   role: z.string().min(1),
   community: z.string().min(1),
+  affiliations: z.array(z.string().min(1)).min(1).optional(),
+  linkedinUrl: url.optional().nullable(),
   headshot: z.string().nullable(),
   bio: z.string().min(1),
   committee: z.string().min(1),

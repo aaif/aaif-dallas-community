@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - an AWS account and IAM role allowed to deploy the stack;
-- a Route 53 public hosted zone;
+- DNS access with Cloudflare or another DNS provider;
 - an ACM certificate in `us-east-1` covering the site hostname;
 - GitHub Actions OIDC trust for the deployment role;
 - a configured Luma event URL and embed URL;
@@ -51,14 +51,33 @@ aws cloudformation deploy \
   --template-file infrastructure/static-site.yml \
   --parameter-overrides \
     SiteDomainName=summit.example.org \
-    HostedZoneId=Z123456789 \
     CertificateArn=arn:aws:acm:us-east-1:123456789012:certificate/uuid \
   --capabilities CAPABILITY_IAM
 ```
 
 The stack creates a versioned private S3 origin, Origin Access Control,
-CloudFront distribution, HTTPS alias, and Route 53 record. Keep the source
-bucket private.
+CloudFront distribution, and HTTPS alias. Keep the source bucket private.
+
+## Configure Cloudflare DNS
+
+After the stack deploys, get the CloudFront domain:
+
+```bash
+aws cloudformation describe-stacks \
+  --stack-name aaif-dallas-static-site \
+  --query "Stacks[0].Outputs[?OutputKey=='DistributionDomainName'].OutputValue" \
+  --output text
+```
+
+In Cloudflare, create a proxied or DNS-only `CNAME` record:
+
+- **Name**: `agenticaisummit`
+- **Target**: the `DistributionDomainName` value
+
+DNS-only mode is the simplest initial configuration because CloudFront already
+provides CDN caching and TLS. Cloudflare SSL mode must support a full HTTPS
+origin; do not use Flexible SSL. The ACM certificate must cover the complete
+hostname and must be issued in `us-east-1`.
 
 ## Configure GitHub
 
@@ -71,14 +90,16 @@ Create a protected `production` environment and set:
 - variable `SITE_URL`: the production HTTPS URL used on the deployment page.
 
 Scope the role to the deployed bucket, CloudFront invalidation, and the required
-OIDC subject. Do not store long-lived AWS access keys in GitHub.
+OIDC subject. Do not store long-lived AWS access keys in GitHub. The deployment
+workflow uses no third-party actions: it relies only on the runner's built-in
+`git`, Node.js 22, AWS CLI, curl, and jq.
 
 ## Release behavior
 
 Every pull request runs content validation, lint, type checking, tests, and a
-production build. Merges to `main` repeat those gates and then sync immutable
-assets to S3. `index.html` is non-cacheable, and CloudFront is invalidated after
-the upload.
+production build. Merges to `main` repeat those gates, exchange a short-lived
+GitHub OIDC token for AWS credentials, and then sync immutable assets to S3.
+`index.html` is non-cacheable, and CloudFront is invalidated after the upload.
 
 ## Rollback
 
