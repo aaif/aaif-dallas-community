@@ -80,11 +80,13 @@ export const organizerSchema = z.object({
   name: z.string().min(1),
   role: z.string().min(1),
   community: z.string().min(1),
+  communities: z.array(z.string().min(1)).min(1).optional(),
   affiliations: z.array(z.string().min(1)).min(1).optional(),
   linkedinUrl: url.optional().nullable(),
   headshot: z.string().nullable(),
   bio: z.string().min(1),
   committee: z.string().min(1),
+  committees: z.array(z.string().min(1)).min(1).optional(),
 });
 
 export const committeeSchema = z.object({

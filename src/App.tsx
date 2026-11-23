@@ -158,8 +158,9 @@ function HomePage() {
           <Link className="text-link" to="/schedule">View full schedule <ArrowRight size={16} /></Link>
         </div>
         <div className="track-grid">
-          <TrackCard label="Track A • Main Auditorium" title="Systems engineering" sessions={["Sandboxing & runtimes", "Gateways & vulnerabilities", "Observability & evidence", "Trajectory & causality"]} />
-          <TrackCard label="Track B • Hands-on lab" title="Implementation & protocols" sessions={["Production MCP servers", "MCP hardening", "A2A agent discovery", "End-to-end orchestration"]} accent />
+          <TrackCard label="Track A • Main Auditorium" title="Architecture & systems" sessions={["Architecture & systems", "Sandboxing & runtimes", "Identity & trust", "Observability & evaluations"]} />
+          <TrackCard label="Track B • Workshops" title="MCP & A2A" sessions={["Production MCP servers", "MCP hardening", "A2A agent discovery", "End-to-end interoperability"]} accent />
+          <TrackCard label="Track C • Workshop" title="Distributed systems" sessions={["Dapr fundamentals", "Resilient services", "Distributed workflows", "Agent system integration"]} />
         </div>
       </section>
 
@@ -366,12 +367,18 @@ function CommunityPage() {
               <div className="organizer-headshot">
                 {organizer.headshot ? <img src={organizer.headshot} alt={`Portrait of ${organizer.name}`} /> : <span>{initials(organizer.name)}</span>}
               </div>
-              <div><span>{organizer.committee}</span><h3>{organizer.name}</h3><strong>{organizer.role}</strong></div>
+              <div>
+                <div className="organizer-committees">
+                  {(organizer.committees ?? [organizer.committee]).map((committee) => <span key={committee}>{committee}</span>)}
+                </div>
+                <h3>{organizer.name}</h3>
+                <strong>{organizer.role}</strong>
+              </div>
             </div>
             <p>{organizer.bio}</p>
             <div className="organizer-meta">
               <div className="organizer-affiliations">
-                {(organizer.affiliations ?? [organizer.community]).map((affiliation) => <small key={affiliation}>{affiliation}</small>)}
+                {(organizer.communities ?? organizer.affiliations ?? [organizer.community]).map((affiliation) => <small key={affiliation}>{affiliation}</small>)}
               </div>
               {organizer.linkedinUrl && (
                 <a href={organizer.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`${organizer.name} on LinkedIn`}>

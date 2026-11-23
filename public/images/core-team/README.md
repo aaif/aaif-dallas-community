@@ -1,4 +1,5 @@
 # CORE Team Headshots
 
 Place approved portraits for selected CORE team members here. Reference them with
-paths such as `/images/core-team/person-name.webp`.
+paths such as `/images/core-team/person-name.png`. WebP images are also
+supported.

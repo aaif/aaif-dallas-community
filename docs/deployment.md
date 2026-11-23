@@ -29,7 +29,7 @@ Example trust policy (replace the AWS account ID):
     "Condition": {
       "StringEquals": {
         "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
-        "token.actions.githubusercontent.com:sub": "repo:aaif/aaif-dallas-community:environment:production"
+        "token.actions.githubusercontent.com:sub": "repo:aaif@244048685/aaif-dallas-community@1468153719:environment:production"
       }
     }
   }]
@@ -42,6 +42,30 @@ The role permission policy should be limited to:
 - `s3:GetObject`, `s3:PutObject`, and `s3:DeleteObject` on the site bucket's
   objects;
 - `cloudfront:CreateInvalidation` on the deployed distribution.
+
+The OIDC provider must exist in the same AWS account and have
+`sts.amazonaws.com` in its client ID list. Verify the provider and role trust
+policy before enabling deployments:
+
+```bash
+aws iam get-open-id-connect-provider \
+  --open-id-connect-provider-arn \
+  arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com
+
+aws iam get-role \
+  --role-name AAIFDallasStaticSiteDeployment \
+  --query 'Role.AssumeRolePolicyDocument' \
+  --output json
+```
+
+GitHub's current default subject qualifies the owner and repository names with
+their immutable numeric IDs
+(`repo:aaif@244048685/aaif-dallas-community@1468153719:environment:production`).
+Verify these IDs if the organization or repository is recreated. An
+`InvalidIdentityToken` response means AWS could not validate the token,
+typically because the OIDC provider is absent or its client IDs are incorrect.
+An `AccessDenied` response means the token was validated but its claims did not
+match the role trust policy.
 
 ## Create the static infrastructure
 

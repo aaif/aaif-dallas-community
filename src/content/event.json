@@ -15,9 +15,9 @@
   "mission": "Bring multiple Dallas-area communities together for practical learning, production knowledge, and inclusive access to agentic AI.",
   "notice": "Environment setup, lab repositories, and prerequisites are sent by Luma to registered attendees.",
   "stats": [
-    { "value": "2", "label": "Parallel afternoon tracks" },
+    { "value": "3", "label": "Parallel afternoon tracks" },
     { "value": "8", "label": "Production-focused sessions" },
-    { "value": "2", "label": "Hands-on labs" },
+    { "value": "3", "label": "Hands-on labs" },
     { "value": "Free", "label": "Community admission" }
   ]
 }

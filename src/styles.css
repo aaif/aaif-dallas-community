@@ -85,7 +85,7 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", sans-serif; letter-spacing: -.045
 .feature-card h3 { font-size: 21px; margin-bottom: 12px; }
 .feature-card p, .track-card p { color: var(--muted); line-height: 1.65; font-size: 14px; }
 .tracks-section { background: #f1f5f9; }
-.track-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.track-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .track-card { background: var(--ink); color: white; padding: 42px; border-top: 4px solid var(--yellow); }
 .track-card.accent { background: var(--blue); border-color: var(--green); }
 .track-label { color: var(--yellow); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; font-weight: 700; }
@@ -182,7 +182,8 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", sans-serif; letter-spacing: -.045
 .organizer-profile { display: flex; align-items: center; gap: 20px; }
 .organizer-headshot { width: 82px; height: 82px; flex: 0 0 auto; border-radius: 50%; overflow: hidden; background: var(--blue); display: grid; place-items: center; }
 .organizer-headshot span { color: white; font-family: "Space Grotesk"; font-size: 22px; font-weight: 700; }
-.organizer-card .organizer-profile span { color: var(--blue); font-size: 9px; text-transform: uppercase; letter-spacing: .11em; font-weight: 700; }
+.organizer-committees { display: flex; flex-wrap: wrap; gap: 5px 8px; }
+.organizer-card .organizer-profile .organizer-committees span { color: var(--blue); font-size: 9px; text-transform: uppercase; letter-spacing: .11em; font-weight: 700; }
 .organizer-card h3 { font-size: 24px; margin: 11px 0 4px; }
 .organizer-card strong { color: var(--muted); font-size: 12px; }
 .organizer-card p { line-height: 1.6; color: var(--muted); }
