@@ -1,0 +1,73 @@
+[
+  {
+    "id": "core-team",
+    "name": "CORE Team",
+    "shortName": "CORE",
+    "description": "Sets summit strategy, coordinates workstreams, resolves cross-team decisions, and maintains the shared event timeline.",
+    "responsibilities": ["Overall governance", "Decision escalation", "Community alignment"],
+    "status": "Selection in progress"
+  },
+  {
+    "id": "guest-experience",
+    "name": "Guest Experience & Registration",
+    "shortName": "Guest Experience",
+    "description": "Creates a welcoming, accessible arrival-to-departure experience and coordinates registration support with Luma.",
+    "responsibilities": ["Attendee communications", "Registration desk", "Accessibility & hospitality"]
+  },
+  {
+    "id": "branding-media",
+    "name": "Branding, Signage & Media",
+    "shortName": "Brand & Media",
+    "description": "Maintains a consistent summit identity across print, digital, venue signage, photography, and published media.",
+    "responsibilities": ["Creative assets", "Wayfinding", "Photography & recap media"]
+  },
+  {
+    "id": "public-relations",
+    "name": "Public Relations & Protocols",
+    "shortName": "PR & Protocols",
+    "description": "Coordinates official messaging, dignitary protocols, press engagement, social amplification, and sensitive communications.",
+    "responsibilities": ["Press relations", "Official protocol", "Public communications"]
+  },
+  {
+    "id": "programming-stage",
+    "name": "Programming & Stage Management",
+    "shortName": "Program & Stage",
+    "description": "Builds the technical program, prepares speakers, protects session quality, and keeps every stage on schedule.",
+    "responsibilities": ["Content curation", "Speaker readiness", "Stage timing"]
+  },
+  {
+    "id": "technical-production",
+    "name": "Technical Production",
+    "shortName": "Production",
+    "description": "Owns the end-to-end technical delivery plan for keynotes, presentations, demonstrations, labs, and recording.",
+    "responsibilities": ["Run of show", "Demo readiness", "Technical contingencies"]
+  },
+  {
+    "id": "av-it",
+    "name": "AV & IT",
+    "shortName": "AV / IT",
+    "description": "Delivers reliable presentation, audio, networking, streaming, and participant connectivity across the venue.",
+    "responsibilities": ["Audio & video", "Wi-Fi & connectivity", "Streaming support"]
+  },
+  {
+    "id": "venue-logistics",
+    "name": "Venue Operations & Logistics",
+    "shortName": "Venue & Logistics",
+    "description": "Coordinates rooms, safety, furniture, catering, deliveries, setup, teardown, and operational vendors.",
+    "responsibilities": ["Venue readiness", "Catering & safety", "Setup & teardown"]
+  },
+  {
+    "id": "sponsor-partners",
+    "name": "Sponsorship & Partner Management",
+    "shortName": "Sponsors & Partners",
+    "description": "Aligns sponsor benefits, partner participation, booth needs, commitments, acknowledgements, and post-event follow-up.",
+    "responsibilities": ["Sponsor delivery", "Partner liaison", "Benefit fulfillment"]
+  },
+  {
+    "id": "academic-outreach",
+    "name": "Academic Engagement & Student Outreach",
+    "shortName": "Academic Outreach",
+    "description": "Connects universities, faculty, student chapters, and emerging researchers through posters, volunteers, and learning opportunities.",
+    "responsibilities": ["University partners", "Student posters", "Volunteer & mentor outreach"]
+  }
+]

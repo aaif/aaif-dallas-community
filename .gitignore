@@ -1,0 +1,11 @@
+node_modules
+dist
+.DS_Store
+*.local
+coverage
+
+# Participant exports and organizer data
+*.csv
+data/private/
+participant-*
+attendee-*

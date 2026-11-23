@@ -1,0 +1,59 @@
+name: Prepare content change
+
+on:
+  workflow_dispatch:
+    inputs:
+      content_key:
+        description: JSON domain to update
+        required: true
+        type: choice
+        options: [event, schedule, speakers, partners, organizers, committees, resources, news]
+      record_id:
+        description: Record ID; use "event" for event JSON and "section/id" for partners
+        required: true
+        type: string
+      content_value:
+        description: Complete replacement JSON object for the selected record
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    environment: content-review
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Prepare validated content edit
+        env:
+          CONTENT_KEY: ${{ inputs.content_key }}
+          CONTENT_RECORD_ID: ${{ inputs.record_id }}
+          CONTENT_VALUE: ${{ inputs.content_value }}
+        run: npm run prepare:content-change
+      - run: npm run validate:content
+      - name: Create pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CONTENT_KEY: ${{ inputs.content_key }}
+          CONTENT_RECORD_ID: ${{ inputs.record_id }}
+        run: |
+          branch="content/${CONTENT_KEY}-$(date +%Y%m%d%H%M%S)"
+          git switch -c "$branch"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "src/content/${CONTENT_KEY}.json"
+          git commit -m "chore(content): update ${CONTENT_KEY} record"
+          git push --set-upstream origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "Content: update ${CONTENT_KEY} record" \
+            --body "Prepared by the reviewed content workflow.\n\nRecord: \`${CONTENT_RECORD_ID}\`\n\nReview the public-facing values, links, and references before merging."

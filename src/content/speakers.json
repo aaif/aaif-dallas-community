@@ -1,0 +1,68 @@
+[
+  {
+    "id": "keynote-one",
+    "name": "Keynote Speaker 1",
+    "role": "AI Systems & Architecture",
+    "organization": "Announcing Soon",
+    "headshot": null,
+    "bio": "A production AI systems leader sharing practical patterns for moving from prompt wrappers to resilient agent networks.",
+    "sessionIds": ["production-shift"],
+    "topics": ["Multi-agent systems", "Durable execution"],
+    "featured": true
+  },
+  {
+    "id": "keynote-two",
+    "name": "Keynote Speaker 2",
+    "role": "Protocols & Open Standards",
+    "organization": "Announcing Soon",
+    "headshot": null,
+    "bio": "An open-standards practitioner exploring decentralized discovery, negotiation, and trustworthy cross-organizational agents.",
+    "sessionIds": ["internet-of-agents"],
+    "topics": ["A2A", "Agent discovery"],
+    "featured": true
+  },
+  {
+    "id": "architecture-lead",
+    "name": "Systems Architecture Lead",
+    "role": "Enterprise AI & Distributed Systems",
+    "organization": "Announcing Soon",
+    "headshot": null,
+    "bio": "The Track A lead for systems architecture, sandboxing, observability, and production evaluation.",
+    "sessionIds": ["architecture-patterns", "sandboxing", "observability"],
+    "topics": ["Architecture", "Observability", "Runtimes"],
+    "featured": true
+  },
+  {
+    "id": "security-lead",
+    "name": "Identity & Security Lead",
+    "role": "Zero-Trust Agent Security",
+    "organization": "Announcing Soon",
+    "headshot": null,
+    "bio": "A security practitioner focused on machine identity, delegated authority, and protected agent boundaries.",
+    "sessionIds": ["identity-trust"],
+    "topics": ["Identity", "Security"],
+    "featured": true
+  },
+  {
+    "id": "lab-one",
+    "name": "Track B Lab Facilitator",
+    "role": "Model Context Protocol Lead",
+    "organization": "Announcing Soon",
+    "headshot": null,
+    "bio": "Hands-on facilitator for production MCP construction, authentication, validation, and threat mitigation.",
+    "sessionIds": ["mcp-lab"],
+    "topics": ["MCP", "OAuth"],
+    "featured": false
+  },
+  {
+    "id": "lab-two",
+    "name": "Track B A2A Facilitator",
+    "role": "Distributed Multi-Agent Systems",
+    "organization": "Announcing Soon",
+    "headshot": null,
+    "bio": "Hands-on facilitator for agent cards, asynchronous task lifecycles, and federated peer orchestration.",
+    "sessionIds": ["a2a-lab"],
+    "topics": ["A2A", "Interoperability"],
+    "featured": false
+  }
+]
