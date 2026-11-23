@@ -8,6 +8,13 @@
     "status": "Selection in progress"
   },
   {
+    "id": "advisors",
+    "name": "Advisors",
+    "shortName": "Advisors",
+    "description": "Provides strategic guidance, subject-matter expertise, and cross-committee support to help team members deliver a cohesive summit.",
+    "responsibilities": ["Strategic guidance", "Cross-committee support", "Advisor profiles"]
+  },
+  {
     "id": "guest-experience",
     "name": "Guest Experience & Registration",
     "shortName": "Guest Experience",

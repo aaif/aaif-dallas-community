@@ -59,6 +59,20 @@ optimized image using a type-specific folder:
 - CORE team headshots: `public/images/core-team/`
 - committee team headshots: `public/images/committee-team/`
 
+Organizer records can include an optional `affiliations` array and nullable
+`linkedinUrl`, for example:
+
+```json
+{
+  "affiliations": ["AAIF Dallas", "IEEE Dallas"],
+  "linkedinUrl": "https://www.linkedin.com/in/profile-name/"
+}
+```
+
+When `affiliations` is omitted, the existing `community` value is displayed as
+the organizer's affiliation. Use `null` for `linkedinUrl` when the profile is
+not available.
+
 Until a headshot is supplied, the site shows an initials fallback. Organizing
 communities and community partners include nullable `logo` paths. Sponsor
 records include a nullable `logo` path and a contact URL. Never put unlicensed

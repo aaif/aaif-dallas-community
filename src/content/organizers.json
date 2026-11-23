@@ -2,8 +2,10 @@
   {
     "id": "general-chair",
     "name": "Govindaraj Palanisamy",
-    "role": "General Chair & Founder",
+    "role": "Chair and Founding Member",
     "community": "AAIF Dallas",
+    "affiliations": ["AAIF Dallas"],
+    "linkedinUrl": null,
     "headshot": null,
     "bio": "Directs summit strategy, community partnerships, and technical curriculum alignment.",
     "committee": "Core Team"

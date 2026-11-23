@@ -368,7 +368,17 @@ function CommunityPage() {
               </div>
               <div><span>{organizer.committee}</span><h3>{organizer.name}</h3><strong>{organizer.role}</strong></div>
             </div>
-            <p>{organizer.bio}</p><small>{organizer.community}</small>
+            <p>{organizer.bio}</p>
+            <div className="organizer-meta">
+              <div className="organizer-affiliations">
+                {(organizer.affiliations ?? [organizer.community]).map((affiliation) => <small key={affiliation}>{affiliation}</small>)}
+              </div>
+              {organizer.linkedinUrl && (
+                <a href={organizer.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`${organizer.name} on LinkedIn`}>
+                  <Linkedin size={15} /> LinkedIn
+                </a>
+              )}
+            </div>
           </article>
         ))}</div>
       </section>

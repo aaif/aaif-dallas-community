@@ -26,11 +26,21 @@ jobs:
     runs-on: ubuntu-latest
     environment: content-review
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
+      - name: Check out repository
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          git init .
+          AUTH_HEADER="$(printf 'x-access-token:%s' "$GITHUB_TOKEN" | base64 -w 0)"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH_HEADER" \
+            fetch --depth=1 "https://github.com/${GITHUB_REPOSITORY}.git" "${GITHUB_SHA}"
+          git checkout --detach "${GITHUB_SHA}"
+      - name: Select Node.js 22
+        run: |
+          NODE_22="$(find "${RUNNER_TOOL_CACHE}/node" -maxdepth 5 -type f -path '*/22*/x64/bin/node' -print 2>/dev/null | sort -V | tail -1)"
+          test -n "$NODE_22" || { echo "::error::Node.js 22 is not available on this runner"; exit 1; }
+          echo "$(dirname "$NODE_22")" >> "$GITHUB_PATH"
+          "$NODE_22" --version
       - run: npm ci
       - name: Prepare validated content edit
         env:
@@ -51,7 +61,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "src/content/${CONTENT_KEY}.json"
           git commit -m "chore(content): update ${CONTENT_KEY} record"
-          git push --set-upstream origin "$branch"
+          AUTH_HEADER="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w 0)"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH_HEADER" \
+            push "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/${branch}"
           gh pr create \
             --base main \
             --head "$branch" \
