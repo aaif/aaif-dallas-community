@@ -12,6 +12,7 @@ on:
       - "index.html"
       - "vite.config.ts"
       - "tsconfig*.json"
+      - ".github/workflows/deploy.yml"
 
 concurrency:
   group: production-static-site
@@ -68,9 +69,10 @@ jobs:
           AWS_DEPLOY_ROLE_ARN: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
           AWS_REGION: ${{ vars.AWS_REGION }}
         run: |
-          OIDC_TOKEN="$(curl --fail --silent --show-error \
+          OIDC_TOKEN="$(curl --fail --silent --show-error --get \
             -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
-            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com" |
+            --data-urlencode "audience=sts.amazonaws.com" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}" |
             jq -r '.value')"
           test -n "$OIDC_TOKEN" && test "$OIDC_TOKEN" != "null" || {
             echo "::error::GitHub did not issue an OIDC token"

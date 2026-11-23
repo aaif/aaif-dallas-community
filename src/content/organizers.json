@@ -4,37 +4,45 @@
     "name": "Govindaraj Palanisamy",
     "role": "Chair and Founding Member",
     "community": "AAIF Dallas",
+    "communities": ["AAIF Dallas"],
     "affiliations": ["AAIF Dallas"],
-    "linkedinUrl": null,
-    "headshot": null,
+    "linkedinUrl": "https://www.linkedin.com/in/govindarajp",
+    "headshot": "/images/core-team/govindaraj-palanisamy.png",
     "bio": "Directs summit strategy, community partnerships, and technical curriculum alignment.",
-    "committee": "Core Team"
+    "committee": "Core Team",
+    "committees": ["Core Team"]
   },
   {
     "id": "ieee-chair",
     "name": "IEEE Dallas Section Leadership",
     "role": "IEEE Section Co-Chair",
     "community": "IEEE Dallas",
+    "communities": ["IEEE Dallas"],
     "headshot": null,
     "bio": "Oversees technical co-sponsorship, member outreach, and student chapter participation.",
-    "committee": "Core Team"
+    "committee": "Core Team",
+    "committees": ["Core Team"]
   },
   {
     "id": "technical-program",
     "name": "Technical Program Committee",
     "role": "Peer Review & Quality Evaluation",
     "community": "Multi-community",
+    "communities": ["Multi-community"],
     "headshot": null,
     "bio": "Reviews architecture, security, protocol, runtime, and observability session proposals.",
-    "committee": "Review Board"
+    "committee": "Review Board",
+    "committees": ["Review Board"]
   },
   {
     "id": "lab-ops",
     "name": "Hands-On Lab Operations",
     "role": "Developer Sandboxes & Tooling",
     "community": "Multi-community",
+    "communities": ["Multi-community"],
     "headshot": null,
     "bio": "Coordinates development environments, lab repositories, technical support, and setup guides.",
-    "committee": "Operations"
+    "committee": "Operations",
+    "committees": ["Operations"]
   }
 ]

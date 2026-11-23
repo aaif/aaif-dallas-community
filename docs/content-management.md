@@ -46,8 +46,9 @@ exists.
 ## Images
 
 Commit only optimized public images. Do not use attendee photos or private
-documents. Prefer WebP or AVIF, explicit dimensions, descriptive alt text, and
-files below 250 KB where practical.
+documents. PNG, WebP, and AVIF are supported. Prefer PNG for images that require
+transparency, or WebP/AVIF for smaller files. Use explicit dimensions,
+descriptive alt text, and files below 250 KB where practical.
 
 Speaker and organizer records include a nullable `headshot` path. Add a local
 optimized image using a type-specific folder:
@@ -59,19 +60,22 @@ optimized image using a type-specific folder:
 - CORE team headshots: `public/images/core-team/`
 - committee team headshots: `public/images/committee-team/`
 
-Organizer records can include an optional `affiliations` array and nullable
-`linkedinUrl`, for example:
+Organizer records can include optional `communities`, `committees`, and
+`affiliations` arrays plus a nullable `linkedinUrl`, for example:
 
 ```json
 {
+  "communities": ["AAIF Dallas", "IEEE Dallas"],
+  "committees": ["Core Team", "Technical Production"],
   "affiliations": ["AAIF Dallas", "IEEE Dallas"],
   "linkedinUrl": "https://www.linkedin.com/in/profile-name/"
 }
 ```
 
-When `affiliations` is omitted, the existing `community` value is displayed as
-the organizer's affiliation. Use `null` for `linkedinUrl` when the profile is
-not available.
+`communities` takes precedence over `affiliations` for the displayed community
+tags. When both are omitted, the existing `community` value is displayed.
+Likewise, `committees` takes precedence over the singular `committee` label.
+Use `null` for `linkedinUrl` when the profile is not available.
 
 Until a headshot is supplied, the site shows an initials fallback. Organizing
 communities and community partners include nullable `logo` paths. Sponsor

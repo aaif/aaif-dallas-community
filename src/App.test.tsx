@@ -23,9 +23,9 @@ it("filters schedule sessions by topic", async () => {
 
   await user.type(screen.getByPlaceholderText(/search sessions/i), "MCP");
 
-  expect(screen.getByRole("heading", { name: "Production MCP Servers & Hardening" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "MCP Workshop" })).toBeInTheDocument();
   expect(screen.getByText("1 sessions")).toBeInTheDocument();
-  expect(screen.queryByRole("heading", { name: "Multi-Agent A2A Interoperability" })).not.toBeInTheDocument();
+  expect(screen.queryByRole("heading", { name: "A2A Workshop" })).not.toBeInTheDocument();
 });
 
 it("announces the student poster submission until its external form is configured", () => {

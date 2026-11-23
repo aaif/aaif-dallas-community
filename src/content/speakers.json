@@ -28,7 +28,7 @@
     "organization": "Announcing Soon",
     "headshot": null,
     "bio": "The Track A lead for systems architecture, sandboxing, observability, and production evaluation.",
-    "sessionIds": ["architecture-patterns", "sandboxing", "observability"],
+    "sessionIds": ["adaptable-builder", "architecture-systems", "sandboxing", "observability", "trajectory-evaluations"],
     "topics": ["Architecture", "Observability", "Runtimes"],
     "featured": true
   },
