@@ -6,6 +6,7 @@ import partnersData from "./partners.json";
 import resourcesData from "./resources.json";
 import scheduleData from "./schedule.json";
 import speakersData from "./speakers.json";
+import sponsorsData from "./sponsors.json";
 import {
   committeeSchema,
   eventSchema,
@@ -15,6 +16,7 @@ import {
   resourceSchema,
   sessionSchema,
   speakerSchema,
+  sponsorsSchema,
   validateCrossReferences,
 } from "./schema";
 import { z } from "zod";
@@ -23,6 +25,7 @@ const event = eventSchema.parse(eventData);
 const schedule = z.array(sessionSchema).parse(scheduleData);
 const speakers = z.array(speakerSchema).parse(speakersData);
 const partners = partnersSchema.parse(partnersData);
+const sponsors = sponsorsSchema.parse(sponsorsData);
 const organizers = z.array(organizerSchema).parse(organizersData);
 const committees = z.array(committeeSchema).parse(committeesData);
 const resources = z.array(resourceSchema).parse(resourcesData);
@@ -38,6 +41,7 @@ export const content = {
   schedule,
   speakers,
   partners,
+  sponsors,
   organizers,
   committees,
   resources,

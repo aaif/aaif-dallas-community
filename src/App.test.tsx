@@ -60,6 +60,25 @@ it("keeps sponsorship on its own page and uses the official community links", ()
   renderRoute("/sponsorship");
 
   expect(screen.getByRole("heading", { name: "Hands-On Lab & Tooling" })).toBeInTheDocument();
+  expect(screen.getByText("Title Sponsor")).toBeInTheDocument();
+  expect(screen.getByText("Community Sponsor")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Contact the event team" })).toHaveAttribute(
+    "href",
+    "https://forms.gle/Z97JA1Fzidzr5GD28",
+  );
+  expect(screen.getByAltText("Example Technology logo")).toHaveAttribute("src", "/images/sponsors/example-sponsor.svg");
+  expect(screen.getAllByText("Gold Sponsor")).toHaveLength(2);
+  expect(screen.getByRole("link", { name: /become a sponsor/i })).toHaveAttribute(
+    "href",
+    "mailto:npgovintarajan@gmail.com?subject=Agentic%20AI%20Summit%20Sponsorship",
+  );
+  expect(screen.getAllByRole("link", { name: /discuss this package/i })).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        href: expect.stringContaining("mailto:npgovintarajan@gmail.com"),
+      }),
+    ]),
+  );
   expect(screen.getByRole("link", { name: /github/i })).toHaveAttribute("href", "https://github.com/aaif");
   expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute("href", "https://www.linkedin.com/company/aaif-dallas/");
 });

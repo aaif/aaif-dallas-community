@@ -202,6 +202,13 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", sans-serif; letter-spacing: -.045
 .sponsor-logo-card img { width: 100%; max-height: 65px; object-fit: contain; }
 .sponsor-logo-card strong { font-family: "Space Grotesk"; font-size: 21px; }
 .sponsor-logo-card span { color: var(--muted); margin-top: 9px; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+.sponsor-level-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.sponsor-level { background: white; padding: 24px; }
+.sponsor-level > span { color: var(--blue); font-family: "Space Grotesk"; font-size: 18px; font-weight: 700; }
+.sponsor-level p { color: var(--muted); font-size: 12px; line-height: 1.6; min-height: 78px; }
+.sponsor-level ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 9px; }
+.sponsor-level li { display: flex; align-items: flex-start; gap: 7px; font-size: 11px; line-height: 1.45; }
+.sponsor-level li svg { color: var(--green); flex: 0 0 auto; }
 .sponsor-package-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 30px; }
 .sponsorship-divider { height: 1px; background: var(--line); margin: 60px 0; }
 .sponsor-package-heading h3 { font-size: 34px; margin: 9px 0 0; max-width: 680px; }
@@ -268,7 +275,7 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", sans-serif; letter-spacing: -.045
   .filter-bar { grid-template-columns: 1fr; }
   .schedule-row { grid-template-columns: 115px 1fr; }
   .resource-grid, .organizer-grid, .committee-grid, .sponsor-grid { grid-template-columns: 1fr; }
-  .sponsor-logo-grid { grid-template-columns: 1fr; }
+  .sponsor-logo-grid, .sponsor-level-grid { grid-template-columns: 1fr; }
   .sponsor-package-heading { align-items: flex-start; flex-direction: column; }
   .sponsor-package-grid { grid-template-columns: 1fr 1fr; }
   .foundation-partnership { grid-template-columns: 1fr; gap: 25px; }

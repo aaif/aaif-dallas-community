@@ -60,10 +60,24 @@ const partnerSchema = z.object({
 export const partnersSchema = z.object({
   organizingCommunities: z.array(partnerSchema),
   communityPartners: z.array(partnerSchema),
+});
+
+export const sponsorsSchema = z.object({
+  contact: z.object({
+    name: z.string().min(1),
+    role: z.string().min(1),
+    email: z.email(),
+    formUrl: url,
+  }),
   sponsors: z.array(partnerSchema.extend({
     tier: z.string().min(1),
-    logo: z.string().nullable(),
     url: z.string(),
+  })),
+  levels: z.array(z.object({
+    id,
+    name: z.string().min(1),
+    description: z.string().min(1),
+    benefits: z.array(z.string().min(1)).min(1),
   })),
   sponsorPackages: z.array(z.object({
     id,
@@ -120,6 +134,7 @@ export const contentSchemas = {
   schedule: z.array(sessionSchema),
   speakers: z.array(speakerSchema),
   partners: partnersSchema,
+  sponsors: sponsorsSchema,
   organizers: z.array(organizerSchema),
   committees: z.array(committeeSchema),
   resources: z.array(resourceSchema),
@@ -130,6 +145,7 @@ export type EventContent = z.infer<typeof eventSchema>;
 export type Session = z.infer<typeof sessionSchema>;
 export type Speaker = z.infer<typeof speakerSchema>;
 export type Partners = z.infer<typeof partnersSchema>;
+export type Sponsors = z.infer<typeof sponsorsSchema>;
 export type Organizer = z.infer<typeof organizerSchema>;
 export type Committee = z.infer<typeof committeeSchema>;
 export type Resource = z.infer<typeof resourceSchema>;

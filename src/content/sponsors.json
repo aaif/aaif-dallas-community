@@ -1,0 +1,92 @@
+{
+  "contact": {
+    "name": "Govindaraj Palanisamy",
+    "role": "AAIF Chair",
+    "email": "npgovintarajan@gmail.com",
+    "formUrl": "https://forms.gle/Z97JA1Fzidzr5GD28"
+  },
+  "sponsors": [
+    {
+      "id": "leadership",
+      "name": "Sponsorships Open",
+      "tier": "Founding Partner",
+      "description": "Support a free, inclusive technical summit for 400+ practitioners.",
+      "logo": null,
+      "url": "mailto:npgovintarajan@gmail.com?subject=Agentic%20AI%20Summit%20Sponsorship"
+    },
+    {
+      "id": "example-sponsor",
+      "name": "Example Technology",
+      "tier": "Gold Sponsor",
+      "description": "Example sponsor record demonstrating logo and sponsorship level presentation.",
+      "logo": "/images/sponsors/example-sponsor.svg",
+      "url": "mailto:npgovintarajan@gmail.com?subject=Gold%20Sponsorship%20Example"
+    }
+  ],
+  "levels": [
+    {
+      "id": "title",
+      "name": "Title Sponsor",
+      "description": "Lead summit-wide visibility and strategic alignment with the organizing community.",
+      "benefits": ["Exclusive title recognition", "Primary stage and event branding", "Keynote introduction opportunity", "Premium booth and networking access"]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum Sponsor",
+      "description": "Prominent recognition across the main program, digital channels, and venue.",
+      "benefits": ["Premier logo placement", "Stage and break-slide recognition", "Exhibit or community booth", "Delegate networking access"]
+    },
+    {
+      "id": "gold",
+      "name": "Gold Sponsor",
+      "description": "Strong visibility with practitioners attending technical sessions and workshops.",
+      "benefits": ["Event and website logo placement", "Break-slide recognition", "Exhibit or community space", "Social media acknowledgement"]
+    },
+    {
+      "id": "silver",
+      "name": "Silver Sponsor",
+      "description": "Meaningful support for the summit community with broad brand recognition.",
+      "benefits": ["Website logo placement", "Shared sponsor-slide recognition", "Social media acknowledgement", "Recognition in event materials"]
+    },
+    {
+      "id": "community",
+      "name": "Community Sponsor",
+      "description": "Support local access, student participation, and the wider Dallas technical ecosystem.",
+      "benefits": ["Community partner listing", "Event page recognition", "Social media acknowledgement"]
+    }
+  ],
+  "sponsorPackages": [
+    {
+      "id": "hospitality",
+      "name": "Food & Hospitality",
+      "audience": "400 delegates, speakers, and organizers",
+      "description": "Support breakfast, a catered lunch, or refreshment stations throughout the summit.",
+      "benefits": ["Dining or station signage", "Stage and break-slide recognition", "Direct networking access"],
+      "collaboration": "Hospitality Sponsor"
+    },
+    {
+      "id": "member-merch",
+      "name": "AAIF Member Products & Swag",
+      "audience": "Every summit delegate",
+      "description": "Support official AAIF apparel, developer bags, badge lanyards, and practical attendee gear.",
+      "benefits": ["Co-branded merchandise placement", "Event and bag badge visibility", "Post-event brand presence"],
+      "collaboration": "Official Merch Sponsor"
+    },
+    {
+      "id": "lab-tooling",
+      "name": "Hands-On Lab & Tooling",
+      "audience": "MCP, A2A, and Dapr lab participants",
+      "description": "Provide cloud compute, model API access, sandbox environments, and tooling for the code-first labs.",
+      "benefits": ["Lab repository attribution", "Developer environment integration", "Printed guide recognition"],
+      "collaboration": "Platform Sponsor"
+    },
+    {
+      "id": "av-media",
+      "name": "AV, Live Stream & Podcast",
+      "audience": "In-person and online viewers",
+      "description": "Power confidence monitors, multi-camera broadcast, session recording, and an on-site podcast space.",
+      "benefits": ["Stream lower-thirds", "Podcast backdrop branding", "Archive attribution"],
+      "collaboration": "AV & Media Sponsor"
+    }
+  ]
+}
