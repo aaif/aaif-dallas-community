@@ -67,6 +67,7 @@ export const sponsorsSchema = z.object({
     name: z.string().min(1),
     role: z.string().min(1),
     email: z.email(),
+    formUrl: url,
   }),
   sponsors: z.array(partnerSchema.extend({
     tier: z.string().min(1),

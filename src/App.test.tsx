@@ -62,6 +62,10 @@ it("keeps sponsorship on its own page and uses the official community links", ()
   expect(screen.getByRole("heading", { name: "Hands-On Lab & Tooling" })).toBeInTheDocument();
   expect(screen.getByText("Title Sponsor")).toBeInTheDocument();
   expect(screen.getByText("Community Sponsor")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Contact the event team" })).toHaveAttribute(
+    "href",
+    "https://forms.gle/Z97JA1Fzidzr5GD28",
+  );
   expect(screen.getByAltText("Example Technology logo")).toHaveAttribute("src", "/images/sponsors/example-sponsor.svg");
   expect(screen.getAllByText("Gold Sponsor")).toHaveLength(2);
   expect(screen.getByRole("link", { name: /become a sponsor/i })).toHaveAttribute(
