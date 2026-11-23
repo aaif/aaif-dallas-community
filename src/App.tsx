@@ -423,7 +423,7 @@ function SponsorshipPage() {
         <div className="sponsorship-divider" />
         <div className="section-heading">
           <div><span className="kicker">Sponsorship levels</span><h3>Choose a level of impact.</h3></div>
-          <p><a href={content.sponsors.contact.formUrl} target="_blank" rel="noreferrer">Contact the event team by completing the form</a> to tailor a partnership.</p>
+          <p><a href={content.sponsors.contact.formUrl} target="_blank" rel="noreferrer">Contact the event team</a> to tailor a partnership.</p>
         </div>
         <div className="sponsor-level-grid">{content.sponsors.levels.map((level) => (
           <article className="sponsor-level" key={level.id}>
