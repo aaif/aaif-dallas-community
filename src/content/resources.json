@@ -1,0 +1,24 @@
+[
+  {
+    "id": "environment",
+    "title": "Lab Environment Setup",
+    "description": "Registered participants receive repository access and environment setup guidance through Luma before the summit.",
+    "audience": "Lab participants",
+    "url": "https://lu.ma/aaif-dallas",
+    "available": true
+  },
+  {
+    "id": "mcp-readiness",
+    "title": "Production MCP Checklist",
+    "description": "Prepare a current Node.js environment, Git, an editor, and familiarity with JSON-RPC and OAuth scopes.",
+    "audience": "MCP lab participants",
+    "available": false
+  },
+  {
+    "id": "a2a-readiness",
+    "title": "A2A Lab Preparation",
+    "description": "Review agent capability discovery, asynchronous task states, and distributed trace context concepts.",
+    "audience": "A2A lab participants",
+    "available": false
+  }
+]

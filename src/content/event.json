@@ -1,0 +1,23 @@
+{
+  "id": "agentic-ai-summit-2027",
+  "name": "Agentic AI Summit",
+  "tagline": "Build the internet of agents—securely, observably, and together.",
+  "edition": "Dallas 2027",
+  "date": "2027-01-23",
+  "dateLabel": "Saturday, January 23, 2027",
+  "time": "8:00 AM–5:00 PM CT",
+  "city": "Dallas, TX",
+  "venue": "Venue announcing soon",
+  "registrationUrl": "https://luma.com/event/evt-Bm7Z8pzyQlpYFW4",
+  "registrationEventId": "evt-Bm7Z8pzyQlpYFW4",
+  "posterUrl": null,
+  "overview": "A full-day technical summit for architects, engineers, researchers, and technical leaders moving from prompt demos to resilient multi-agent systems.",
+  "mission": "Bring multiple Dallas-area communities together for practical learning, production knowledge, and inclusive access to agentic AI.",
+  "notice": "Environment setup, lab repositories, and prerequisites are sent by Luma to registered attendees.",
+  "stats": [
+    { "value": "2", "label": "Parallel afternoon tracks" },
+    { "value": "8", "label": "Production-focused sessions" },
+    { "value": "2", "label": "Hands-on labs" },
+    { "value": "Free", "label": "Community admission" }
+  ]
+}

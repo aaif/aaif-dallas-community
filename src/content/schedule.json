@@ -1,0 +1,122 @@
+[
+  {
+    "id": "doors-open",
+    "start": "2027-01-23T08:00:00-06:00",
+    "end": "2027-01-23T09:00:00-06:00",
+    "title": "Doors Open & Registration",
+    "type": "operations",
+    "track": "Community",
+    "room": "Main Foyer",
+    "summary": "Badge pickup, coffee, Wi-Fi onboarding, and A/V soundchecks.",
+    "speakerIds": [],
+    "tags": ["Networking"]
+  },
+  {
+    "id": "production-shift",
+    "start": "2027-01-23T09:00:00-06:00",
+    "end": "2027-01-23T09:45:00-06:00",
+    "title": "The Production Shift",
+    "type": "keynote",
+    "track": "Main Auditorium",
+    "room": "Main Auditorium",
+    "summary": "Moving from single-prompt wrappers to resilient autonomous multi-agent systems.",
+    "speakerIds": ["keynote-one"],
+    "tags": ["Architecture", "Orchestration"]
+  },
+  {
+    "id": "internet-of-agents",
+    "start": "2027-01-23T09:45:00-06:00",
+    "end": "2027-01-23T10:30:00-06:00",
+    "title": "The Internet of Agents",
+    "type": "keynote",
+    "track": "Main Auditorium",
+    "room": "Main Auditorium",
+    "summary": "Cross-organizational protocols, capability discovery, and trust boundaries.",
+    "speakerIds": ["keynote-two"],
+    "tags": ["A2A", "Protocols"]
+  },
+  {
+    "id": "architecture-patterns",
+    "start": "2027-01-23T10:45:00-06:00",
+    "end": "2027-01-23T11:30:00-06:00",
+    "title": "Architecture Patterns & Workflows",
+    "type": "technical",
+    "track": "Main Auditorium",
+    "room": "Main Auditorium",
+    "summary": "State management, durable execution, human checkpoints, and retry-storm defense.",
+    "speakerIds": ["architecture-lead"],
+    "tags": ["Architecture", "Durable execution"]
+  },
+  {
+    "id": "identity-trust",
+    "start": "2027-01-23T11:30:00-06:00",
+    "end": "2027-01-23T12:15:00-06:00",
+    "title": "Agent Discovery, Identity & Trust",
+    "type": "technical",
+    "track": "Main Auditorium",
+    "room": "Main Auditorium",
+    "summary": "Cryptographic identities, capability registries, and verifying third-party agents.",
+    "speakerIds": ["security-lead"],
+    "tags": ["Security", "Identity"]
+  },
+  {
+    "id": "mcp-lab",
+    "start": "2027-01-23T13:15:00-06:00",
+    "end": "2027-01-23T14:45:00-06:00",
+    "title": "Production MCP Servers & Hardening",
+    "type": "lab",
+    "track": "Track B: Hands-On Lab",
+    "room": "Lab Room",
+    "summary": "Build an authenticated MCP endpoint and defend it against tool poisoning.",
+    "speakerIds": ["lab-one"],
+    "tags": ["MCP", "Security", "Lab"]
+  },
+  {
+    "id": "sandboxing",
+    "start": "2027-01-23T13:15:00-06:00",
+    "end": "2027-01-23T14:00:00-06:00",
+    "title": "Sandboxing & Runtimes",
+    "type": "technical",
+    "track": "Track A: Systems",
+    "room": "Main Auditorium",
+    "summary": "Compare containers, MicroVMs, and Wasm for untrusted agent code execution.",
+    "speakerIds": ["architecture-lead"],
+    "tags": ["Runtimes", "Security"]
+  },
+  {
+    "id": "observability",
+    "start": "2027-01-23T15:00:00-06:00",
+    "end": "2027-01-23T15:45:00-06:00",
+    "title": "Observability & Evidence Artifacts",
+    "type": "technical",
+    "track": "Track A: Systems",
+    "room": "Main Auditorium",
+    "summary": "Trace non-deterministic agent execution with OpenTelemetry and verifiable evidence.",
+    "speakerIds": ["architecture-lead"],
+    "tags": ["Observability", "OpenTelemetry"]
+  },
+  {
+    "id": "a2a-lab",
+    "start": "2027-01-23T15:00:00-06:00",
+    "end": "2027-01-23T16:30:00-06:00",
+    "title": "Multi-Agent A2A Interoperability",
+    "type": "lab",
+    "track": "Track B: Hands-On Lab",
+    "room": "Lab Room",
+    "summary": "Publish agent cards, negotiate capabilities, and orchestrate asynchronous peers.",
+    "speakerIds": ["lab-two"],
+    "tags": ["A2A", "Protocols", "Lab"]
+  },
+  {
+    "id": "wrap-up",
+    "start": "2027-01-23T16:30:00-06:00",
+    "end": "2027-01-23T17:00:00-06:00",
+    "title": "Community Wrap-Up",
+    "type": "community",
+    "track": "Community",
+    "room": "Main Auditorium & Foyer",
+    "summary": "Key takeaways, feedback, community announcements, and informal networking.",
+    "speakerIds": [],
+    "tags": ["Community"]
+  }
+]
